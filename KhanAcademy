@@ -1,0 +1,21 @@
+CREATE TABLE BookStore (id INTEGER PRIMARY KEY, Title TEXT, Author TEXT, Genre TEXT, Price INTEGER, Quantity INTEGER, Delivery_Method TEXT);
+
+INSERT INTO BookStore VALUES (1,"Verity","Colleen Hoover","Thriller",13.99,40,"Online");
+INSERT INTO BookStore VALUES (2, "Wild Rain", "Beverly Jenkins","Romance",7.99,30,"In Store");
+INSERT INTO BookStore VALUES (3, "I Robot","Isaac Asimov","Sci-Fi",11.99,40,"In Store");
+INSERT INTO BookStore VALUES (4,"American Gods","Neil Gaiman","Fantasy",9.99,60, "Online & In Store");
+INSERT INTO BookStore VALUES (5,"Sisters of the YAM","Bell Hooks","Self Help",16.99,50,"Online");
+INSERT INTO BookStore VALUES (6,"Attached","Amir Levine","Self Help",13.99,100,"Online");
+INSERT INTO BookStore VALUES (7,"Ring Shout","P.DJeli Clark","Horror",12.99,40,"In Store");
+INSERT INTO BookStore VALUES (8,"All About Love", "Bell Hooks","Self Help",16.99,200,"Online");
+INSERT INTO BookStore VALUES (9,"Misery", "Stephen King","Horror",6.99,50,"In Store");
+INSERT INTO BookStore VALUES (10,"Atomic Habits", "James Clear","Self Help",14.99,150,"Online & In Store");
+INSERT INTO BookStore VALUES (11,"Lovecraft Country", "Matt Ruff","Sci-Fi Horror",12.99,90,"Online");
+INSERT INTO BookStore VALUES (12,"The Silent Patient", "Alex Michaelides","Thriller",15.99,110,"Online & In Store");
+INSERT INTO BookStore VALUES (13,"Kindred", "Octavia E. Butler","Sci-Fi",10.99,130,"In Store");
+INSERT INTO BookStore VALUES (14,"Becoming", "Michelle Obama","Self Help",17.99,120,"In Store");
+INSERT INTO BookStore VALUES (15,"The Girl On The Train", "Paula Hawkins","Thriller",13.99,40,"Online");
+
+SELECT * FROM BookStore;
+SELECT Price FROM BookStore ORDER BY Price;
+SELECT SUM(Quantity) Delivery_Method FROM BookStore WHERE Delivery_Method = "Online & In Store" AND Genre = "Thriller";
